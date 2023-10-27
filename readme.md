@@ -14,11 +14,11 @@ RAG allows LLM to be updated with new infotmations without being retrained.
 ## Architecture
 
 ```mermaid
-
-flowchart LR
-comment f
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
+sequenceDiagram
+    User->>+App: Query + prompt
+    App->>VectorDB: prompt
+    VectorDB->>App: Retrieve Enhanced context
+    App->>LLM: Query + prompt + Enhanced context
+    LLM->>App: Generated response
+    App->>-User: Generated response
 ```
