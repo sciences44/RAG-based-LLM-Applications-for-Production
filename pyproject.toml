@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "RAGbasedLLMApplicationsforProduction"
+version = "0.1.0"
+description = ""
+authors = ["Sciences44 <hello@sciences44.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ray = {extras = ["data", "serve", "train", "tune"], version = "^2.7.1"}
+python-dotenv = "^1.0.0"
+six = "^1.16.0"
+ipython = "^8.17.2"
+matplotlib = "^3.8.1"
+milvus-cli = "^0.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
